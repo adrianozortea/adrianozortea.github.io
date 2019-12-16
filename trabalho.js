@@ -282,10 +282,11 @@ function render() {
     camera.position.x = neptune.position.x;
     camera.position.y = neptune.position.y;
     camera.position.z = neptune.position.z+10;
-  }else{ ///camera estática
+  }else if(model_view == 0){ ///camera estática
     camera.position.x = 0;
     camera.position.y = 0;
     camera.position.z = 35;
+    model_view = -1;
   }
 
   setupKeyControls();
